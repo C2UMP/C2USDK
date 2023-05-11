@@ -16,4 +16,7 @@ class TBL_API UTBLCheatManager : public UCheatManager
 public:
 	UFUNCTION(BlueprintCallable)
 	void GiveHorse();
+
+	UFUNCTION(BlueprintCallable)
+	void UncapFOV();
 };
