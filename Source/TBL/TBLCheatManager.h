@@ -19,4 +19,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void UncapFOV();
+
+	UFUNCTION(BlueprintCallable)
+	void BlueprintDebugMenu();
 };

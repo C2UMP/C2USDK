@@ -5,3 +5,4 @@
 
 void UTBLCheatManager::GiveHorse() {}
 void UTBLCheatManager::UncapFOV() {}
+void UTBLCheatManager::BlueprintDebugMenu() {}
