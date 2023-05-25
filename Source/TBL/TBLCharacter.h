@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "TBLCharacterBase.h"
+#include "Inventory.h"
 #include "TBLCharacter.generated.h"
 
 /**
@@ -13,5 +14,7 @@ UCLASS()
 class TBL_API ATBLCharacter : public ATBLCharacterBase
 {
 	GENERATED_BODY()
-	
+public:
+	UFUNCTION(BlueprintCallable)
+	UInventory* GetInventory();
 };

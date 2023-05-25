@@ -25,4 +25,19 @@ enum class EGameModeType : uint8 {
 	Symmetrical UMETA(DisplayName = "Symmetrical"),
 };
 
+UENUM(BlueprintType)
+enum class EInventoryItemSlot : uint8 {
+	Carryable UMETA(DisplayName = "Carryable"),
+	Primary UMETA(DisplayName = "Primary"),
+	Secondary UMETA(DisplayName = "Secondary"),
+	Shield UMETA(DisplayName = "Shield"),
+};
+
+UENUM(BlueprintType)
+enum class EPickupEquipOptions : uint8 {
+	Equip UMETA(DisplayName = "Equip"),
+	EquipImmediately UMETA(DisplayName = "EquipImmediately"),
+	LeaveUnequipped UMETA(DisplayName = "LeaveUnequipped"),
+};
+
 class TBL_API TBLStructs {};
