@@ -3,14 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "TBLStructs.h"
+#include "TBLMapSummary.generated.h"
 
 /**
  * 
  */
-
-class TBL_API TBLMapSummary
+UCLASS()
+class TBL_API UTBLMapSummary : public UObject
 {
+	GENERATED_BODY()
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText MapName;
