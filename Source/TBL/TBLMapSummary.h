@@ -3,25 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "TBLStructs.h"
 
 /**
  * 
  */
-UENUM(BlueprintType)
-enum class EFaction : uint8 {
-	Agatha UMETA(DisplayName = "Agatha"),
-	Mason UMETA(DisplayName = "Mason"),
-	FFA UMETA(DisplayName = "FFA"),
-	None UMETA(DisplayName = "None"),
-	All UMETA(DisplayName = "All"),
-};
-
-UENUM(BlueprintType)
-enum class EGameModeType : uint8 {
-	TeamObjective UMETA(DisplayName = "TeamObjective"),
-	TeamDeathMatch UMETA(DisplayName = "TeamDeathMatch"),
-	FreeForAll UMETA(DisplayName = "FreeForAll"),
-};
 
 class TBL_API TBLMapSummary
 {

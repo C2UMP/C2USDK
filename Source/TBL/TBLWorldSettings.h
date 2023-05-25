@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/WorldSettings.h"
+#include "TBLStructs.h"
 #include "TBLWorldSettings.generated.h"
 
 /**
@@ -18,4 +19,6 @@ public:
 	FText MapName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText MapDescription;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EGameModeType GamemodeType;
 };
