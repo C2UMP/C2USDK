@@ -26,4 +26,6 @@ class TBL_API AInventoryItem : public ATBLActor
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FInventoryItemDisplayInfo DisplayInfo;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced)
+	UStaticMeshComponent* StaticMesh;
 };
