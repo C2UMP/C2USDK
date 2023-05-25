@@ -9,9 +9,21 @@
 /**
  * 
  */
+USTRUCT(BlueprintType)
+struct FInventoryItemDisplayInfo {
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText ItemName;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText ItemDescription;
+};
+
 UCLASS()
 class TBL_API AInventoryItem : public ATBLActor
 {
 	GENERATED_BODY()
-	
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FInventoryItemDisplayInfo DisplayInfo;
 };
