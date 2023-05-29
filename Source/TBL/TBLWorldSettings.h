@@ -4,6 +4,7 @@
 #include "GameFramework/WorldSettings.h"
 #include "TBLStructs.h"
 #include "TBLMapSummary.h"
+#include "TBLGameModeSettings.h"
 #include "TBLWorldSettings.generated.h"
 
 /**
@@ -22,4 +23,6 @@ public:
 	FText MapDescription;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EGameModeType GamemodeType;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTBLGameModeSettings* GameModeSettings;
 };
