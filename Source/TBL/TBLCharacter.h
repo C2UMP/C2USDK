@@ -1,10 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "TBLCharacterBase.h"
 #include "Inventory.h"
+#include "StatsComponent.h"
 #include "TBLCharacter.generated.h"
 
 /**
@@ -15,6 +14,8 @@ class TBL_API ATBLCharacter : public ATBLCharacterBase
 {
 	GENERATED_BODY()
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStatsComponent* Stats;
 	UFUNCTION(BlueprintCallable)
 	UInventory* GetInventory();
 };

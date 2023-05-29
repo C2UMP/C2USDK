@@ -1,8 +1,7 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
+#include "TBLStructs.generated.h"
 
 /**
  * 
@@ -10,34 +9,79 @@
 
 UENUM(BlueprintType)
 enum class EFaction : uint8 {
-	Agatha UMETA(DisplayName = "Agatha"),
-	Mason UMETA(DisplayName = "Mason"),
-	FFA UMETA(DisplayName = "FFA"),
-	None UMETA(DisplayName = "None"),
-	All UMETA(DisplayName = "All"),
+	Agatha,
+	Mason,
+	FFA,
+	None,
+	All,
 };
 
 UENUM(BlueprintType)
 enum class EGameModeType : uint8 {
-	TeamObjective UMETA(DisplayName = "TeamObjective"),
-	TeamDeathMatch UMETA(DisplayName = "TeamDeathMatch"),
-	FreeForAll UMETA(DisplayName = "FreeForAll"),
-	Symmetrical UMETA(DisplayName = "Symmetrical"),
+	TeamObjective,
+	TeamDeathMatch,
+	FreeForAll,
+	Symmetrical,
+	LastTeamStanding,
+	CapturePoint,
+	Pushable,
+	CaptureTheFlag,
+	Arena,
+	Scenario,
+	Brawl
 };
 
 UENUM(BlueprintType)
 enum class EInventoryItemSlot : uint8 {
-	Carryable UMETA(DisplayName = "Carryable"),
-	Primary UMETA(DisplayName = "Primary"),
-	Secondary UMETA(DisplayName = "Secondary"),
-	Shield UMETA(DisplayName = "Shield"),
+	Carryable,
+	Primary,
+	Secondary,
+	Shield,
+	Knife,
+	Fists,
+	Item,
+	Bandage,
+	Ammo,
+	Custom,
+	Downed,
+	Quiver,
+	Novelty,
+	Special
 };
 
 UENUM(BlueprintType)
 enum class EPickupEquipOptions : uint8 {
-	Equip UMETA(DisplayName = "Equip"),
-	EquipImmediately UMETA(DisplayName = "EquipImmediately"),
-	LeaveUnequipped UMETA(DisplayName = "LeaveUnequipped"),
+	Equip,
+	EquipImmediately,
+	LeaveUnequipped,
+};
+
+UENUM(BlueprintType)
+enum class EMod : uint8 {
+	Invulnerable,
+	DisableStaminaDrain,
+	UnlimitedAmmo,
+	CannotUseInteractables
+};
+
+UENUM(BlueprintType)
+enum class EStat : uint8 {
+	None,
+	Health,
+	MaxHealth,
+	Overheal,
+	Stamina,
+	MaxStamina
+};
+
+USTRUCT(BlueprintType)
+struct FInventoryItemDisplayInfo {
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText ItemName;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText ItemDescription;
 };
 
 class TBL_API TBLStructs {};
