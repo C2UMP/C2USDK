@@ -74,6 +74,25 @@ enum class EStat : uint8 {
 	MaxStamina
 };
 
+UENUM(BlueprintType)
+enum class EChatType : uint8 {
+	AllSay,
+	TeamSay,
+	Whisper,
+	Admin,
+	Objective,
+	System,
+	ServerSay,
+	Debug,
+	CrosshairMsg,
+	Backend,
+	Party,
+	Spectator,
+	ClosedCaption,
+	ClosedCaptionMason,
+	ClosedCaptionAgatha
+};
+
 USTRUCT(BlueprintType)
 struct FInventoryItemDisplayInfo {
 	GENERATED_BODY()
